@@ -1,0 +1,27 @@
+{
+  "name": "js-template",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^8.10.0",
+    "eslint-config-airbnb-base": "^14.x",
+    "eslint-plugin-import": "^2.x",
+    "prettier": "^1.19.1",
+    "stylelint": "^13.x",
+    "stylelint-config-recommended": "^3.x",
+    "stylelint-config-standard": "^20.x",
+    "stylelint-csstree-validator": "^1.x",
+    "stylelint-scss": "^3.x"
+  },
+  "scripts": {
+    "format": "npx prettier  --write '**/*.{html,js,json,md,json,yaml,yml,jsx}'",
+    "format:check": "npx prettier  --check '**/*.{html,js,json,md,json,yaml,yml}'",
+    "lint": "npx stylelint \"**/*.css\" --fix && npx eslint . --fix",
+    "lint:check": "npx stylelint \"**/*.css\" && npx eslint .",
+    "stylelint": "npx stylelint \"**/*.css\" --fix",
+    "stylelint:check": "npx stylelint \"**/*.css\"",
+    "eslint": "npx eslint . --fix",
+    "eslint:check": "npx eslint ."
+  }
+}
