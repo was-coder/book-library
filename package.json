@@ -15,12 +15,12 @@
     "stylelint-scss": "^3.x"
   },
   "scripts": {
-    "format": "npx prettier  --write '**/*.{html,js,json,md,json,yaml,yml,jsx}'",
-    "format:check": "npx prettier  --check '**/*.{html,js,json,md,json,yaml,yml}'",
-    "lint": "npx stylelint \"**/*.css\" --fix && npx eslint . --fix",
-    "lint:check": "npx stylelint \"**/*.css\" && npx eslint .",
-    "stylelint": "npx stylelint \"**/*.css\" --fix",
-    "stylelint:check": "npx stylelint \"**/*.css\"",
+    "format": "npx prettier  --write **/*.{html,js,json,md,json,yaml,yml,jsx}",
+    "format:check": "npx prettier  --check **/*.{html,js,json,md,json,yaml,yml}",
+    "lint": "npx stylelint **/*.css --fix && npx eslint . --fix",
+    "lint:check": "npx stylelint **/*.css && npx eslint .",
+    "stylelint": "npx stylelint **/*.css --fix",
+    "stylelint:check": "npx stylelint **/*.css",
     "eslint": "npx eslint . --fix",
     "eslint:check": "npx eslint ."
   }

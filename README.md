@@ -1,27 +1,26 @@
-# Project Name
+# Book Library
 
-> One paragraph statement about the project.
+> This is a Javascript Book Library Project.
 
 ![screenshot](./app_screenshot.png)
 
-Additional description about the project and its features.
-
 ## Built With
 
-- Major languages,
-- frameworks,
-- technologies used
+- Html,
+- Css,
+- Javascript,
+- Hosted by Netlify
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://books-lib.netlify.app/)
 
 ### Development (Running locally)
 
 - Clone the project
 
 ```bash
-git clone https://github.com/user/html-css-template.git
+git clone https://github.com/was-coder/book-library.git
 
 ```
 
@@ -70,9 +69,9 @@ npm run html-validator
 
 ## 👤 Author
 
-- Github: [@author](https://github.com/author)
-- Twitter: [@author](https://twitter.com/author)
-- Linkedin: [@author](https://www.linkedin.com/in/author/)
+- Github: [@was-coder](https://github.com/was-coder)
+- Twitter: [@DevWaslead](https://twitter.com/DevWaslead)
+- Linkedin: [@Adelakun Wasiu](https://www.linkedin.com/in/wasiu-adelakun-1a2a5b1a6/)
 
 ## 🤝 Contributing
 
@@ -83,12 +82,6 @@ Feel free to check the [issues page](../../issues).
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration, resources/assets used
-- etc
 
 ## 📝 License
 
