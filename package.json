@@ -4,15 +4,16 @@
   "private": true,
   "dependencies": {},
   "devDependencies": {
-    "eslint": "^8.10.0",
-    "eslint-config-airbnb-base": "^14.x",
+    "eslint": "^8.x",
+    "eslint-config-airbnb-base": "^15.x",
     "eslint-plugin-import": "^2.x",
-    "prettier": "^1.19.1",
-    "stylelint": "^13.x",
-    "stylelint-config-recommended": "^3.x",
-    "stylelint-config-standard": "^20.x",
-    "stylelint-csstree-validator": "^1.x",
-    "stylelint-scss": "^3.x"
+    "hint": "^6.x",
+    "prettier": "^2.x",
+    "stylelint": "^14.x",
+    "stylelint-config-recommended": "^7.x",
+    "stylelint-config-standard": "^25.x",
+    "stylelint-csstree-validator": "^2.x",
+    "stylelint-scss": "^4.x"
   },
   "scripts": {
     "format": "npx prettier  --write **/*.{html,js,json,md,json,yaml,yml,jsx}",

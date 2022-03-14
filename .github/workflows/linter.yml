@@ -20,8 +20,7 @@ jobs:
       - name: Run Prettier
         run: |
           npm run format:check
-
-  stylelint:
+  css:
     name: StyleLint
     runs-on: ubuntu-latest
     if: always()
@@ -38,7 +37,24 @@ jobs:
           npm install
       - name: Run StyleLint
         run: |
-          npm run stylelint:check
+          npm run lint:check
+  webhint:
+    name: Webhint
+    runs-on: ubuntu-latest
+    if: always()
+
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+      - name: Set up Node 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: Install required dependency for node
+        run: |
+          npm install
+      - name: Webhint Report
+        run: npx hint --telemetry=off .
 
   eslint:
     name: ESLint
