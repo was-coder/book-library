@@ -1,7 +1,7 @@
-const title = document.querySelector('.title');
-const author = document.querySelector('.author');
-const contentDiv = document.querySelector('.content-div');
-const form = document.querySelector('.form');
+const title = document.querySelector('#title');
+const author = document.querySelector('#author');
+const contentDiv = document.querySelector('#content-div');
+const form = document.querySelector('#form');
 
 let books = [];
 const getID = () => {
@@ -25,12 +25,16 @@ const declareBook = (title, author) => {
   books.push(bookContent);
 };
 
-const getLocalStorage = (input) => {
-  books = localStorage.getItem(input) === null ? [] : JSON.parse(localStorage.getItem(input));
+const getLocalStorage = (databaseName) => {
+  books = localStorage.getItem(databaseName) === null
+    ? []
+    : JSON.parse(localStorage.getItem(databaseName));
   return books;
 };
 
-const setLocalStorage = (input1, input2) => localStorage.setItem(input1, JSON.stringify(input2));
+const setLocalStorage = (firstValue, secondValue) => {
+  localStorage.setItem(firstValue, JSON.stringify(secondValue));
+};
 
 const addBook = (inputBook) => {
   let contents = '';
