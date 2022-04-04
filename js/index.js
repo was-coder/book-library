@@ -25,10 +25,8 @@ const declareBook = (title, author) => {
   books.push(bookContent);
 };
 
-const getLocalStorage = (databaseName) => {
-  books = localStorage.getItem(databaseName) === null
-    ? []
-    : JSON.parse(localStorage.getItem(databaseName));
+const getLocalStorage = (getValue) => {
+  books = localStorage.getItem(getValue) === null ? [] : JSON.parse(localStorage.getItem(getValue));
   return books;
 };
 
