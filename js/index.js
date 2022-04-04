@@ -5,11 +5,15 @@ const form = document.querySelector('.form');
 
 let books = [];
 const getID = () => {
-  const id = `_${Math.random().toString(36).substring(2, 9)}`;
+  const id = new Date()
+    .getTime()
+    .toString(36)
+    .concat(performance.now().toString(), Math.random().toString())
+    .replace(/\./g, '');
   return id;
 };
 
-const DeclareBook = (title, author) => {
+const declareBook = (title, author) => {
   const bookContent = {
     id: getID(),
     title: '',
@@ -21,14 +25,12 @@ const DeclareBook = (title, author) => {
   books.push(bookContent);
 };
 
-const storeLocalValues = () => {
-  if (localStorage.getItem('books') === null) {
-    books = [];
-  } else {
-    books = JSON.parse(localStorage.getItem('books'));
-  }
+const getLocalStorage = (input) => {
+  books = localStorage.getItem(input) === null ? [] : JSON.parse(localStorage.getItem(input));
   return books;
 };
+
+const setLocalStorage = (input1, input2) => localStorage.setItem(input1, JSON.stringify(input2));
 
 const addBook = (inputBook) => {
   let contents = '';
@@ -41,7 +43,7 @@ const addBook = (inputBook) => {
   `;
     contentDiv.innerHTML = contents;
   });
-  localStorage.setItem('myBookValues', JSON.stringify(books));
+  setLocalStorage('myBookValues', books);
 };
 
 const removeBook = (e) => {
@@ -54,7 +56,7 @@ const removeBook = (e) => {
     contentDiv.removeChild(getContent);
   }
   books = books.filter((book) => book.id !== id);
-  localStorage.setItem('myBookValues', JSON.stringify(books));
+  setLocalStorage('myBookValues', books);
 };
 
 const clearField = () => {
@@ -62,14 +64,14 @@ const clearField = () => {
   author.value = '';
 };
 
-const GetBook = (e) => {
+const getBook = (e) => {
   e.preventDefault();
 
-  DeclareBook(title, author);
+  declareBook(title, author);
   addBook(books);
   clearField();
 };
 
-form.addEventListener('submit', GetBook);
+form.addEventListener('submit', getBook);
 contentDiv.addEventListener('click', removeBook);
-window.addEventListener('load', storeLocalValues);
+window.addEventListener('load', getLocalStorage(books));
