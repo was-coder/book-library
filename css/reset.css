@@ -9,12 +9,12 @@
 
 #header,
 .content,
-#add-btn {
+.btn {
   text-transform: capitalize;
 }
 
 input,
-#add-btn {
+.btn {
   display: block;
   font-weight: 600;
 }

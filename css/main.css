@@ -8,11 +8,15 @@
 
 .content {
   margin: 10px 0;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .pages {
   padding: 5px 0;
+}
+
+hr {
+  margin-top: 30px;
 }
 
 input {
@@ -22,7 +26,7 @@ input {
   border-radius: 5px;
 }
 
-#add-btn {
+.btn {
   padding: 5px;
-  font-size: 16px;
+  cursor: pointer;
 }
