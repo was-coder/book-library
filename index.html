@@ -3,7 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/index.css" />
+    <title>Books Library</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <h1 id="header">awesome books</h1>
+      <div id="content-div"></div>
+
+      <form action="#" method="POST" id="form">
+        <input type="text" name="Title" placeholder="Title" id="title" required />
+        <input type="text" name="Author" placeholder="Author" id="author" required />
+        <button type="submit" id="add-btn" class="btn">add</button>
+      </form>
+    </div>
+
+    <script src="/js/index.js"></script>
+  </body>
 </html>
