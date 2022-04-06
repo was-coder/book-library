@@ -13,17 +13,27 @@ const getID = () => {
   return id;
 };
 
-const declareBook = (title, author) => {
-  const bookContent = {
-    id: getID(),
-    title: '',
-    author: '',
-  };
+class DeclareBook {
+  constructor(id, title, author) {
+    this.id = id;
+    this.title = title;
+    this.author = author;
+  }
 
-  bookContent.title = title.value;
-  bookContent.author = author.value;
-  books.push(bookContent);
-};
+  bookInfo() {
+    const bookContent = {
+      id: this.id,
+      title: title.value,
+      author: title.value,
+    };
+    books.push(bookContent);
+  }
+
+  clearField() {
+    this.title.value = '';
+    this.author.value = '';
+  }
+}
 
 const getLocalStorage = (getValue) => {
   books = localStorage.getItem(getValue) === null ? [] : JSON.parse(localStorage.getItem(getValue));
@@ -49,7 +59,6 @@ const addBook = (inputBook) => {
 };
 
 const removeBook = (e) => {
-  e.preventDefault();
   let id;
   if (e.target.classList.contains('remove-btn')) {
     id = e.target.id;
@@ -61,17 +70,12 @@ const removeBook = (e) => {
   setLocalStorage('myBookValues', books);
 };
 
-const clearField = () => {
-  title.value = '';
-  author.value = '';
-};
-
 const getBook = (e) => {
   e.preventDefault();
-
-  declareBook(title, author);
+  const newBookDeclared = new DeclareBook(getID(), title, author);
+  newBookDeclared.bookInfo();
+  newBookDeclared.clearField();
   addBook(books);
-  clearField();
 };
 
 form.addEventListener('submit', getBook);
