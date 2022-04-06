@@ -59,6 +59,7 @@ const addBook = (inputBook) => {
 };
 
 const removeBook = (e) => {
+  e.preventDefault();
   let id;
   if (e.target.classList.contains('remove-btn')) {
     id = e.target.id;
