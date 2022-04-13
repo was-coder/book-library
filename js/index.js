@@ -3,7 +3,6 @@ const author = document.querySelector('#author');
 const contentDiv = document.querySelector('#content-div');
 const form = document.querySelector('#form');
 
-let books = [];
 const getID = () => {
   const id = new Date()
     .getTime()
@@ -13,6 +12,19 @@ const getID = () => {
   return id;
 };
 
+let books = [];
+
+// Getting and setting lovcal storage
+const getLocalStorage = (getValue) => {
+  books = localStorage.getItem(getValue) === null ? [] : JSON.parse(localStorage.getItem(getValue));
+  return books;
+};
+
+const setLocalStorage = (storageName, inputName) => {
+  localStorage.setItem(storageName, JSON.stringify(inputName));
+};
+
+// Using class to add and remove boook data
 class DeclareBook {
   constructor(id, title, author) {
     this.id = id;
@@ -20,65 +32,83 @@ class DeclareBook {
     this.author = author;
   }
 
-  bookInfo() {
-    const bookContent = {
-      id: this.id,
-      title: title.value,
-      author: title.value,
-    };
-    books.push(bookContent);
+  addBook() {
+    const contents = document.createElement('tr');
+    contents.innerHTML = `
+  <td class="page">${this.title}</td>
+  <td class="page">${this.author}</td>
+  <td><button type="submit" id="${this.id}" class="remove-btn text-capitalize">Remove</button></td>
+  `;
+    contentDiv.appendChild(contents);
   }
 
-  clearField() {
-    this.title.value = '';
-    this.author.value = '';
+  removeBookData() {
+    const bookId = document.querySelector(`#${this.id}`);
+    const getContent = bookId.parentElement.parentElement;
+    contentDiv.removeChild(getContent);
   }
 }
 
-const getLocalStorage = (getValue) => {
-  books = localStorage.getItem(getValue) === null ? [] : JSON.parse(localStorage.getItem(getValue));
-  return books;
+// Clearing form field
+const clearField = () => {
+  title.value = ' ';
+  author.value = ' ';
 };
 
-const setLocalStorage = (firstValue, secondValue) => {
-  localStorage.setItem(firstValue, JSON.stringify(secondValue));
-};
-
-const addBook = (inputBook) => {
-  let contents = '';
-  inputBook.forEach((book) => {
-    contents += `<div class="content">
-  <p class="pages">Title: ${book.title}</p>
-  <p class="pages">Author: ${book.author}</p>
-  <button type="submit" id="${book.id}" class="remove-btn btn">Remove</button> <hr>
-  </div>
+// Updating book from local storage
+const addBook = (book) => {
+  const { id, Title, Author } = book;
+  const contents = document.createElement('tr');
+  contents.innerHTML = `
+  <td class="page">${Title}</td>
+  <td class="page">${Author}</td>
+  <td><button type="submit" id="${id}" class="remove-btn text-capitalize">Remove</button></td>
   `;
-    contentDiv.innerHTML = contents;
-  });
-  setLocalStorage('myBookValues', books);
+  contentDiv.appendChild(contents);
 };
 
+const displayLocalStorage = () => {
+  const display = getLocalStorage('myBookValues');
+  display.forEach((book) => addBook(book));
+};
+
+// Remove book function
 const removeBook = (e) => {
   e.preventDefault();
   let id;
   if (e.target.classList.contains('remove-btn')) {
     id = e.target.id;
-    const bookId = document.getElementById(`${id}`);
-    const getContent = bookId.parentElement;
-    contentDiv.removeChild(getContent);
   }
+  const newBookDeclared = new DeclareBook(id);
+  newBookDeclared.removeBookData();
   books = books.filter((book) => book.id !== id);
   setLocalStorage('myBookValues', books);
 };
 
-const getBook = (e) => {
-  e.preventDefault();
-  const newBookDeclared = new DeclareBook(getID(), title, author);
-  newBookDeclared.bookInfo();
-  newBookDeclared.clearField();
-  addBook(books);
+// Getting all input fields
+const getFormInputs = (getInput) => {
+  const inputValues = { id: getID() };
+  getInput.forEach((input) => {
+    inputValues[input.name] = input.value;
+  });
+  return inputValues;
 };
 
+// Getting book values to be displayed
+const getBook = (e) => {
+  e.preventDefault();
+  const bookInput = e.target.querySelectorAll('.book-input');
+  const returnFormInputs = getFormInputs(bookInput);
+  const { id, Title, Author } = returnFormInputs;
+  books.push(returnFormInputs);
+
+  const newBookDeclared = new DeclareBook(id, Title, Author);
+  newBookDeclared.addBook();
+  clearField();
+  setLocalStorage('myBookValues', books);
+};
+
+// Event listeners
 form.addEventListener('submit', getBook);
 contentDiv.addEventListener('click', removeBook);
-window.addEventListener('load', getLocalStorage(books));
+window.addEventListener('load', displayLocalStorage);

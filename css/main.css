@@ -1,32 +1,24 @@
-.container {
-  margin: 10px;
-}
-
-#header {
-  font-size: 40px;
-}
-
 .content {
   margin: 10px 0;
   font-size: 20px;
 }
 
-.pages {
-  padding: 5px 0;
-}
-
-hr {
-  margin-top: 30px;
-}
-
-input {
-  padding: 7px 5px;
-  margin: 20px 0;
-  width: 25%;
-  border-radius: 5px;
+[type="text"]::placeholder {
+  font-weight: 600;
 }
 
 .btn {
   padding: 5px;
   cursor: pointer;
+}
+
+.page {
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.remove-btn {
+  padding: 7px;
+  border: none;
+  font-weight: 600;
 }

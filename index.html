@@ -4,17 +4,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
     <title>Books Library</title>
   </head>
   <body>
-    <div class="container">
-      <h1 id="header">awesome books</h1>
-      <div id="content-div"></div>
+    <div class="container m-5">
+      <h1 class="text-capitalize text-center pb-5">awesome books</h1>
+      <table class="table table-striped table-responsive table-hover">
+        <thead class="h4">
+          <tr>
+            <td>Title</td>
+            <td>Author</td>
+            <td></td>
+          </tr>
+        </thead>
+        <tbody id="content-div"></tbody>
+      </table>
 
-      <form action="#" method="POST" id="form">
-        <input type="text" name="Title" placeholder="Title" id="title" required />
-        <input type="text" name="Author" placeholder="Author" id="author" required />
-        <button type="submit" id="add-btn" class="btn">add</button>
+      <form action="#" id="form">
+        <div class="form-group">
+          <label for="title" class="sr-only">Title</label>
+          <input
+            type="text"
+            name="Title"
+            placeholder="Title"
+            id="title"
+            required
+            class="form-control book-input"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="author" class="sr-only"></label>
+          <input
+            type="text"
+            name="Author"
+            placeholder="Author"
+            id="author"
+            required
+            class="form-control book-input"
+          />
+        </div>
+
+        <button type="submit" id="add-btn" class="btn text-capitalize">add</button>
       </form>
     </div>
 
