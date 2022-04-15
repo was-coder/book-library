@@ -43,9 +43,8 @@ class DeclareBook {
   }
 
   removeBookData() {
-    const bookId = document.querySelector(`#${this.id}`);
-    const getContent = bookId.parentElement.parentElement;
-    contentDiv.removeChild(getContent);
+    books = books.filter((book) => book.id !== this.id);
+    setLocalStorage('myBookValues', books);
   }
 }
 
@@ -78,11 +77,12 @@ const removeBook = (e) => {
   let id;
   if (e.target.classList.contains('remove-btn')) {
     id = e.target.id;
+    const bookId = document.querySelector(`#${id}`);
+    const getContent = bookId.parentElement.parentElement;
+    contentDiv.removeChild(getContent);
   }
   const newBookDeclared = new DeclareBook(id);
   newBookDeclared.removeBookData();
-  books = books.filter((book) => book.id !== id);
-  setLocalStorage('myBookValues', books);
 };
 
 // Getting all input fields
