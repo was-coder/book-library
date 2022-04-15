@@ -3,7 +3,6 @@ const author = document.querySelector('#author');
 const contentDiv = document.querySelector('#content-div');
 const form = document.querySelector('#form');
 
-let books = [];
 const getID = () => {
   const id = new Date()
     .getTime()
@@ -13,67 +12,103 @@ const getID = () => {
   return id;
 };
 
-const declareBook = (title, author) => {
-  const bookContent = {
-    id: getID(),
-    title: '',
-    author: '',
-  };
+let books = [];
 
-  bookContent.title = title.value;
-  bookContent.author = author.value;
-  books.push(bookContent);
-};
-
+// Getting and setting lovcal storage
 const getLocalStorage = (getValue) => {
   books = localStorage.getItem(getValue) === null ? [] : JSON.parse(localStorage.getItem(getValue));
   return books;
 };
 
-const setLocalStorage = (firstValue, secondValue) => {
-  localStorage.setItem(firstValue, JSON.stringify(secondValue));
+const setLocalStorage = (storageName, inputName) => {
+  localStorage.setItem(storageName, JSON.stringify(inputName));
 };
 
-const addBook = (inputBook) => {
-  let contents = '';
-  inputBook.forEach((book) => {
-    contents += `<div class="content">
-  <p class="pages">Title: ${book.title}</p>
-  <p class="pages">Author: ${book.author}</p>
-  <button type="submit" id="${book.id}" class="remove-btn btn">Remove</button> <hr>
-  </div>
+// Using class to add and remove boook data
+class DeclareBook {
+  constructor(id, title, author) {
+    this.id = id;
+    this.title = title;
+    this.author = author;
+  }
+
+  addBook() {
+    const contents = document.createElement('tr');
+    contents.innerHTML = `
+  <td class="page">${this.title}</td>
+  <td class="page">${this.author}</td>
+  <td><button type="submit" id="${this.id}" class="remove-btn text-capitalize">Remove</button></td>
   `;
-    contentDiv.innerHTML = contents;
-  });
-  setLocalStorage('myBookValues', books);
+    contentDiv.appendChild(contents);
+  }
+
+  removeBookData() {
+    books = books.filter((book) => book.id !== this.id);
+    setLocalStorage('myBookValues', books);
+  }
+}
+
+// Clearing form field
+const clearField = () => {
+  title.value = ' ';
+  author.value = ' ';
 };
 
+// Updating book from local storage
+const addBook = (book) => {
+  const { id, Title, Author } = book;
+  const contents = document.createElement('tr');
+  contents.innerHTML = `
+  <td class="page">${Title}</td>
+  <td class="page">${Author}</td>
+  <td><button type="submit" id="${id}" class="remove-btn text-capitalize">Remove</button></td>
+  `;
+  contentDiv.appendChild(contents);
+};
+
+const displayLocalStorage = () => {
+  const display = getLocalStorage('myBookValues');
+  display.forEach((book) => addBook(book));
+};
+
+// Remove book function
 const removeBook = (e) => {
   e.preventDefault();
   let id;
   if (e.target.classList.contains('remove-btn')) {
     id = e.target.id;
-    const bookId = document.getElementById(`${id}`);
-    const getContent = bookId.parentElement;
+    const bookId = document.querySelector(`#${id}`);
+    const getContent = bookId.parentElement.parentElement;
     contentDiv.removeChild(getContent);
   }
-  books = books.filter((book) => book.id !== id);
+  const newBookDeclared = new DeclareBook(id);
+  newBookDeclared.removeBookData();
+};
+
+// Getting all input fields
+const getFormInputs = (getInput) => {
+  const inputValues = { id: getID() };
+  getInput.forEach((input) => {
+    inputValues[input.name] = input.value;
+  });
+  return inputValues;
+};
+
+// Getting book values to be displayed
+const getBook = (e) => {
+  e.preventDefault();
+  const bookInput = e.target.querySelectorAll('.book-input');
+  const returnFormInputs = getFormInputs(bookInput);
+  const { id, Title, Author } = returnFormInputs;
+  books.push(returnFormInputs);
+
+  const newBookDeclared = new DeclareBook(id, Title, Author);
+  newBookDeclared.addBook();
+  clearField();
   setLocalStorage('myBookValues', books);
 };
 
-const clearField = () => {
-  title.value = '';
-  author.value = '';
-};
-
-const getBook = (e) => {
-  e.preventDefault();
-
-  declareBook(title, author);
-  addBook(books);
-  clearField();
-};
-
+// Event listeners
 form.addEventListener('submit', getBook);
 contentDiv.addEventListener('click', removeBook);
-window.addEventListener('load', getLocalStorage(books));
+window.addEventListener('load', displayLocalStorage);

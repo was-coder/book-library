@@ -6,15 +6,3 @@
   margin: 0;
   box-sizing: border-box;
 }
-
-#header,
-.content,
-.btn {
-  text-transform: capitalize;
-}
-
-input,
-.btn {
-  display: block;
-  font-weight: 600;
-}
