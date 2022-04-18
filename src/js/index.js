@@ -1,3 +1,5 @@
+import '../css/index.css';
+
 const title = document.querySelector('#title');
 const author = document.querySelector('#author');
 const contentDiv = document.querySelector('#content-div');
@@ -14,7 +16,7 @@ const getID = () => {
 
 let books = [];
 
-// Getting and setting lovcal storage
+// Getting and setting local storage
 const getLocalStorage = (getValue) => {
   books = localStorage.getItem(getValue) === null ? [] : JSON.parse(localStorage.getItem(getValue));
   return books;
