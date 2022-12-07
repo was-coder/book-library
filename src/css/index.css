@@ -2,3 +2,5 @@
 This imports the `css` files */
 @import "./reset.css";
 @import "./main.css";
+@import "./medium_screen.css" screen and (min-width: 768px);
+@import "./large_screen.css" screen and (min-width: 992px);

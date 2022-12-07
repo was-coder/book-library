@@ -1,0 +1,16 @@
+.navbar-toggler {
+  display: none;
+}
+
+.navbar-collapse {
+  float: right;
+  margin: 0;
+}
+
+.page {
+  font-size: 18px;
+}
+
+.btn {
+  width: 20%;
+}
