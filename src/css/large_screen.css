@@ -1,3 +1,11 @@
 .btn {
   width: 15%;
 }
+
+.book-input {
+  width: 40%;
+}
+
+.btn::after {
+  right: -20px;
+}

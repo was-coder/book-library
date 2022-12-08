@@ -1,3 +1,7 @@
+.header {
+  height: 8vh;
+}
+
 .navbar-toggler {
   display: none;
 }
@@ -13,4 +17,28 @@
 
 .btn {
   width: 20%;
+}
+
+.banner-title {
+  font-size: 4rem;
+}
+
+.description {
+  margin: 0 auto;
+  width: 90%;
+  text-align: center;
+}
+
+.book-input {
+  width: 60%;
+}
+
+.btn::after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 2px;
+  right: 0;
+  font-size: 2.5rem;
+  transition: 1s;
 }

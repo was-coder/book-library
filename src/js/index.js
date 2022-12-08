@@ -1,7 +1,7 @@
-import Header from './header';
-import BookList from './bookList';
-import Footer from './footer';
-import controller from './controller';
+import Header from './reusable/header';
+import Home from './pages/home';
+import Footer from './reusable/footer';
+import controller from './functionality/controller/controller';
 import getLocalStorage from './storage/getStorage';
 
 const fragment = document.createDocumentFragment();
@@ -11,7 +11,7 @@ const container = document.querySelector('#main-container');
 homeSection.className = 'main';
 homeSection.id = 'main';
 const main = (section) => homeSection.appendChild(section);
-main(BookList.getBookList());
+main(Home.getHome());
 
 fragment.appendChild(Header.getHeader());
 fragment.appendChild(homeSection);

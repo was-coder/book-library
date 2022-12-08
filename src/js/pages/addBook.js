@@ -2,9 +2,8 @@ class AddBook {
   static getBookAdded() {
     const addBookSection = document.createElement('section');
     addBookSection.className = 'container home';
-    addBookSection.id = 'add';
     addBookSection.innerHTML = `
-    <h2 class="text-center pb-5">Add new Awesome Books</h2>
+    <h2 class="text-center pb-5 add-header">Add new Awesome Books</h2>
       <form class="form" id="form">
       <label for="title" class="sr-only">Title</label>
       <div class="form-group">

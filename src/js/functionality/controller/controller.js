@@ -1,17 +1,18 @@
-import BookList from './bookList';
-import AddBook from './addBook';
-import Contact from './contact';
-import updateNewBook from './updateNewBook';
-import deleteBook from './deleteBook';
-import setLocalStorage from './storage/setStorage';
-import getLocalStorage from './storage/getStorage';
-import loadPage from './loadPage';
-import getFormValues from './getFormValues';
+import Home from '../../pages/home';
+import BookList from '../../pages/bookList';
+import AddBook from '../../pages/addBook';
+import Contact from '../../pages/contact';
+import updateNewBook from '../updateNewBook';
+import deleteBook from '../deleteBook';
+import setLocalStorage from '../../storage/setStorage';
+import getLocalStorage from '../../storage/getStorage';
+import loadPage from '../loadPage';
+import getFormValues from '../forms/getFormValues';
 import addBookController from './addBookController';
-import addPopUp from './addPopUp';
-import NewBookAdded from './newBookAdded';
-import removePopUp from './removePopUp';
-import clearFormValues from './clearFormValues';
+import addPopUp from '../popup/addPopUp';
+import NewBookAdded from '../newBookAdded';
+import removePopUp from '../popup/removePopUp';
+import clearFormValues from '../forms/clearFormValues';
 
 //
 
@@ -89,6 +90,7 @@ const controller = () => {
   const switchTab = (e) => {
     if (e.target.classList.contains('nav-link') || e.target.classList.contains('button')) {
       const tab = {
+        home: Home.getHome(),
         bookList: BookList.getBookList(),
         addBook: AddBook.getBookAdded(),
         contact: Contact.getContact(),

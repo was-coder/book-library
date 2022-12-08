@@ -2,11 +2,11 @@ class BookList {
   static getBookList() {
     const tableSection = document.createElement('section');
     tableSection.className = 'container home';
-    tableSection.id = 'list';
+    // tableSection.id = 'list';
 
     // Create the table header
     const tableHeader = document.createElement('h2');
-    tableHeader.className = 'text-center pb-5';
+    tableHeader.className = 'text-center pb-5 tableHeader';
     tableHeader.textContent = 'List of Awesome Books';
 
     // Create the table element
@@ -15,6 +15,7 @@ class BookList {
 
     // Create the table header row
     const tableHeaderRow = document.createElement('tr');
+    tableHeaderRow.className = 'tableHeader';
     tableHeaderRow.innerHTML = `
       <th class="th-sm">Title</th>
       <th class="th-sm">Author</th>

@@ -1,18 +1,17 @@
 /* Header styling */
 .header {
-  top: 0;
   z-index: 1;
-  min-height: 10vh;
+  min-height: 5vh;
 }
 
 .navbar-brand {
-  font-size: 25px;
+  font-size: 2.5rem;
 }
 
 .navbar-toggler {
   float: right;
   margin: 10px;
-  border: 1px solid #592941;
+  border: none;
 }
 
 .navbar-collapse {
@@ -25,35 +24,85 @@
   margin: 15px;
 }
 
-.nav-item .nav-link:hover {
-  font-size: 19px;
+.nav-link:hover {
+  cursor: pointer;
+}
+
+.li-navLink {
   transition: all 0.5s ease-in-out;
+  font-size: 19px;
 }
 
 /* Homepage Styling */
 .home {
-  min-height: 80vh;
+  background: var(--ghost-white);
+  min-width: 100vw;
+  padding-top: 15vh;
+  padding-bottom: 5vh;
+  min-height: 100vh;
+}
+
+.banner-title {
+  font-size: 3rem;
+  color: var(--ocean-blue);
+  text-align: center;
+}
+
+.description {
+  padding: 20px 0;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.add-book-btn,
+.book-list-btn {
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
+.featured {
+  padding-top: 30px;
+  color: var(--ocean-blue);
+}
+
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.book-item {
+  width: 200px;
+  margin: 20px;
+  text-align: center;
+}
+
+.book-item h3 {
+  font-size: 1.7rem;
+  margin: 10px 0;
+  font-weight: 600;
+  color: var(--cadet);
+}
+
+.book-item p {
+  font-size: 16px;
 }
 
 .btn {
   position: relative;
-  padding: 10px;
   cursor: pointer;
-  background-color: #548c2f;
+  background-color: var(--green);
   border-radius: 25px;
   width: 25%;
   display: block;
   transition: all 1s;
-}
-
-.btn::after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 5px;
-  right: -20px;
-  font-size: 20px;
-  transition: 1s;
+  font-size: 18px;
+  padding: 10px 20px;
 }
 
 .btn:hover {
@@ -78,10 +127,44 @@
   background: none;
 }
 
+/* Add book styling */
+.add-header {
+  color: var(--ocean-blue);
+  font-size: 3.5rem;
+  padding-bottom: 30px;
+}
+
+.book-input {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.table {
+  margin: 0 auto;
+  width: 80%;
+  border: 10px;
+  padding: 20px;
+  color: var(--ghost-white);
+  background-color: var(--cadet);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.tableHeader {
+  color: var(--ocean-blue);
+}
+
+.table:hover {
+  transition: all 1s ease-in-out;
+  font-size: 19px;
+}
+
 /* Footer Styling */
 .footer-div {
-  min-height: 5vh;
   text-align: center;
   bottom: 0;
-  margin-top: 25px;
+}
+
+.footer-div h5 {
+  font-size: 1.5rem;
 }
