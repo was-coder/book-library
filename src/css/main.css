@@ -139,24 +139,22 @@
   width: 80%;
 }
 
+input[type='text'] {
+  padding: 10px;
+  height: 4rem;
+  font-size: 2rem;
+}
+
 .table {
   margin: 0 auto;
   width: 80%;
-  border: 10px;
-  padding: 20px;
-  color: var(--ghost-white);
-  background-color: var(--cadet);
-  font-size: 2rem;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 
 .tableHeader {
   color: var(--ocean-blue);
-}
-
-.table:hover {
-  transition: all 1s ease-in-out;
-  font-size: 19px;
+  font-size: 3.5rem;
 }
 
 /* Footer Styling */

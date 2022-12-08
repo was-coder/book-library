@@ -5,12 +5,3 @@ const getLocalStorage = () => {
 };
 
 export default getLocalStorage;
-
-// const getLocalStorage = () => {
-//   const items = localStorage.getItem('myBookValues');
-//   let books = [];
-//   if (items) {
-//     books = JSON.parse(items);
-//   }
-//   return books;
-// };

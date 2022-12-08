@@ -14,8 +14,6 @@ import NewBookAdded from '../newBookAdded';
 import removePopUp from '../popup/removePopUp';
 import clearFormValues from '../forms/clearFormValues';
 
-//
-
 const controller = () => {
   let books = [];
   let getBook;
@@ -64,11 +62,9 @@ const controller = () => {
 
   const add = (e) => {
     e.preventDefault();
-    // // books = getLocalStorage();
     const bookFormValues = e.target.querySelectorAll('.book-input');
     getBook = getFormValues(bookFormValues);
     books.push(getBook);
-    // books = [...books, getBook];
     setLocalStorage(books);
     switchedBookList();
     clearFormValues(bookFormValues);
