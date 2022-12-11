@@ -5,7 +5,7 @@ class BookList {
 
     // Creating the table header
     const tableHeader = document.createElement('h2');
-    tableHeader.className = 'text-center pb-5 tableHeader';
+    tableHeader.className = 'text-center pb-5 table-header';
     tableHeader.textContent = 'List of Awesome Books';
 
     // Creating the table element
@@ -20,7 +20,7 @@ class BookList {
 
     // Creating the table header row
     const tableHeaderRow = document.createElement('tr');
-    tableHeaderRow.className = 'tableHeader';
+    tableHeaderRow.className = 'table-header';
     tableHeaderRow.innerHTML = `
       <th class="th-sm">Title</th>
       <th class="th-sm">Author</th>

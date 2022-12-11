@@ -15,6 +15,7 @@
 .nav-link:hover {
   color: var(--amber);
 }
+
 /* HomePage Styling */
 .home {
   padding-top: 10vh;
@@ -40,7 +41,7 @@
 }
 
 .btn::after {
-  content: '\00bb';
+  content: "\00bb";
   position: absolute;
   opacity: 0;
   top: 4px;
@@ -60,7 +61,7 @@
   font-size: 2rem;
 }
 
-.tableHeader {
+.table-header {
   font-size: 3rem;
 }
 
