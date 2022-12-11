@@ -11,7 +11,7 @@ const updateNewBook = (updateBook) => {
     removeBtn.id = id;
     titleColumn.innerText = title;
     authorColumn.innerText = author;
-    removeBtn.innerText = 'Remove';
+    removeBtn.innerText = 'Remove Book';
     removeBtn.className = 'remove-btn';
     removeColumn.append(removeBtn);
     row.append(titleColumn, authorColumn, removeColumn);

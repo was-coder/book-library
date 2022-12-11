@@ -14,8 +14,8 @@ class Home {
       </div>
 
       <div class="buttons">
-        <a class="nav-link btn add-book-btn" data-target="addBook">Add Book</a>
-        <a class="nav-link btn book-list-btn" data-target="bookList">Book List</a>
+        <a class="nav-link btn btn-book" data-target="addBook">Add Book</a>
+        <a class="nav-link btn btn-book" data-target="bookList">Book List</a>
       </div>
 
       <h2 class="text-center featured">Featured Books</h2>

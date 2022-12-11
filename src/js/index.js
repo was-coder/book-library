@@ -1,5 +1,6 @@
 import Header from './reusable/header';
-import Home from './pages/home';
+// import Home from './pages/home';
+import Contact from './pages/contact';
 import Footer from './reusable/footer';
 import controller from './functionality/controller/controller';
 import getLocalStorage from './storage/getStorage';
@@ -11,7 +12,7 @@ const container = document.querySelector('#main-container');
 homeSection.className = 'main';
 homeSection.id = 'main';
 const main = (section) => homeSection.appendChild(section);
-main(Home.getHome());
+main(Contact.getContact());
 
 fragment.appendChild(Header.getHeader());
 fragment.appendChild(homeSection);
@@ -33,6 +34,7 @@ const getLocal = () => {
 container.addEventListener('click', (e) => {
   if (e.target.classList.contains('nav-link')) {
     bookController.switchTab(e);
+    document.querySelector('.navbar-collapse').classList.remove('show');
   }
 });
 

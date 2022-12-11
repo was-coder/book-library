@@ -3,22 +3,22 @@ class BookList {
     const tableSection = document.createElement('section');
     tableSection.className = 'container home';
 
-    // Create the table header
+    // Creating the table header
     const tableHeader = document.createElement('h2');
     tableHeader.className = 'text-center pb-5 tableHeader';
     tableHeader.textContent = 'List of Awesome Books';
 
-    // Create the table element
+    // Creating the table element
     const tableElement = document.createElement('table');
     tableElement.className = 'table table-striped table-hover';
 
-    // Add some style to the table element
+    // Adding some style to the table element
     tableElement.style.borderCollapse = 'collapse';
     tableElement.style.width = '100%';
     tableElement.style.paddingLeft = '20px';
     tableElement.style.paddingRight = '20px';
 
-    // Create the table header row
+    // Creating the table header row
     const tableHeaderRow = document.createElement('tr');
     tableHeaderRow.className = 'tableHeader';
     tableHeaderRow.innerHTML = `
@@ -27,17 +27,17 @@ class BookList {
       <th class="th-sm"></th>
     `;
 
-    // Add some style to the table header cells
+    // Adding some style to the table header cells
     const tableHeaderCells = tableHeaderRow.querySelectorAll('th');
     tableHeaderCells.forEach((cell) => {
       cell.style.textAlign = 'left';
       cell.style.paddingTop = '12px';
       cell.style.paddingBottom = '12px';
-      cell.style.backgroundColor = '#4caf50';
-      cell.style.color = 'white';
+      cell.style.backgroundColor = '#1a183a';
+      cell.style.color = '#e8e8f0';
     });
 
-    // Create the table body
+    // Creating the table body
     const tableBody = document.createElement('tbody');
     tableBody.className = 'content-div';
 

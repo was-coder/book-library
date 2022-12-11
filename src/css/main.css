@@ -9,14 +9,18 @@
 }
 
 .navbar-toggler {
-  float: right;
-  margin: 10px;
+  position: absolute;
   border: none;
+  top: 5px;
+  right: 5px;
+  color: var(--amber);
+  font-size: 3rem;
 }
 
 .navbar-collapse {
   font-size: 18px;
   margin-top: 50px;
+  text-align: center;
 }
 
 .nav-item {
@@ -24,13 +28,13 @@
   margin: 15px;
 }
 
-.nav-link:hover {
-  cursor: pointer;
+.nav-link {
+  transition: all 0.5s ease-in-out;
+  font-size: 2rem;
 }
 
-.li-navLink {
-  transition: all 0.5s ease-in-out;
-  font-size: 19px;
+.nav-link:hover {
+  cursor: pointer;
 }
 
 /* Homepage Styling */
@@ -38,20 +42,22 @@
   background: var(--ghost-white);
   min-width: 100vw;
   padding-top: 15vh;
-  padding-bottom: 5vh;
+  padding-bottom: 10vh;
   min-height: 100vh;
 }
 
 .banner-title {
   font-size: 3rem;
-  color: var(--ocean-blue);
+  color: var(--green);
   text-align: center;
+  font-weight: 600;
 }
 
 .description {
   padding: 20px 0;
-  font-size: 18px;
+  font-size: 2rem;
   line-height: 1.5;
+  text-align: center;
 }
 
 .buttons {
@@ -59,15 +65,10 @@
   justify-content: center;
 }
 
-.add-book-btn,
-.book-list-btn {
-  font-size: 18px;
-  padding: 10px 20px;
-}
-
 .featured {
   padding-top: 30px;
-  color: var(--ocean-blue);
+  color: var(--green);
+  font-weight: 600;
 }
 
 .book-list {
@@ -90,48 +91,50 @@
 }
 
 .book-item p {
-  font-size: 16px;
+  font-size: 1.7rem;
 }
 
-.btn {
-  position: relative;
+.btn-book {
+  font-size: 1.5rem;
+}
+
+/* Book List Styling */
+.table {
+  margin: 0 auto;
+  width: 80%;
+  font-size: 1.5rem;
   cursor: pointer;
-  background-color: var(--green);
-  border-radius: 25px;
-  width: 25%;
-  display: block;
-  transition: all 1s;
-  font-size: 18px;
-  padding: 10px 20px;
 }
 
-.btn:hover {
-  padding-right: 15px;
+th {
+  padding-left: 10px;
 }
 
-.btn:hover::after {
-  opacity: 1;
-  right: 20px;
+.tableHeader {
+  color: var(--green);
+  font-size: 3rem;
+  padding: 10px 0;
+  font-weight: 600;
 }
 
-.btn:focus {
-  outline: none;
-}
-
-.page {
-  text-transform: capitalize;
+.th-sm {
+  font-size: 2rem;
 }
 
 .remove-btn {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  color: var(--red);
   border: none;
   background: none;
 }
 
 /* Add book styling */
 .add-header {
-  color: var(--ocean-blue);
-  font-size: 3.5rem;
+  color: var(--green);
+  font-size: 3rem;
   padding-bottom: 30px;
+  font-weight: 600;
 }
 
 .book-input {
@@ -145,16 +148,31 @@ input[type='text'] {
   font-size: 2rem;
 }
 
-.table {
-  margin: 0 auto;
-  width: 80%;
-  font-size: 1.5rem;
-  cursor: pointer;
+/* Contact Styling */
+.contact-info {
+  color: var(--green);
+  font-weight: 600;
 }
 
-.tableHeader {
-  color: var(--ocean-blue);
-  font-size: 3.5rem;
+.contact-description {
+  padding: 20px 0;
+}
+
+.contact-ul-div {
+  display: flex;
+  justify-content: center;
+  text-align: start;
+}
+
+.contact-ul-div li {
+  padding: 5px 0;
+  font-size: 1.5rem;
+}
+
+.list-span {
+  color: var(--cadet);
+  font-weight: 600;
+  padding-left: 5px;
 }
 
 /* Footer Styling */
@@ -164,5 +182,5 @@ input[type='text'] {
 }
 
 .footer-div h5 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 }
