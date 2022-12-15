@@ -3,7 +3,12 @@ class Contact {
     const contactSection = document.createElement('section');
     contactSection.className = 'container home contact';
     contactSection.innerHTML = `
+    <div>
+    <p class="time"></p>
+    </div>
+    <div>
     <h2 class="text-center pb-5 contact-info">Contact Information</h2>
+    </div>
     <div class="text-center">
     <p class="contact-description">Do you have any questions or you just want to say "Hello"? You can reach out to us!</p>
     <div class="contact-ul-div">

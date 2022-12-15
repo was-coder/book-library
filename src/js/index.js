@@ -35,6 +35,10 @@ container.addEventListener('click', (e) => {
     bookController.switchTab(e);
     document.querySelector('.navbar-collapse').classList.remove('show');
   }
+
+  const time = document.querySelector('.time');
+  const me = new Date();
+  time.textContent = me.toLocaleString();
 });
 
 window.addEventListener('load', getLocal);

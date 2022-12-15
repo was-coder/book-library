@@ -142,13 +142,19 @@ th {
   width: 80%;
 }
 
-input[type="text"] {
+input[type='text'] {
   padding: 10px;
   height: 4rem;
   font-size: 2rem;
 }
 
 /* Contact Styling */
+.time {
+  display: flex;
+  justify-content: flex-end;
+  color: var(--cadet);
+  font-weight: 600;
+}
 .contact-info {
   color: var(--green);
   font-weight: 600;
