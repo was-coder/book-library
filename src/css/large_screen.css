@@ -9,3 +9,8 @@
 .btn::after {
   right: -20px;
 }
+
+/* Popup Styling */
+.success-background {
+  width: 50%;
+}

@@ -41,7 +41,7 @@
 }
 
 .btn::after {
-  content: "\00bb";
+  content: '\00bb';
   position: absolute;
   opacity: 0;
   top: 4px;
@@ -89,4 +89,27 @@
 
 .contact-ul-div li {
   font-size: 2rem;
+}
+
+/* Popup Styling */
+.success-background {
+  width: 70%;
+}
+
+.successful {
+  font-size: 2rem;
+}
+
+.pop-btn {
+  margin: 0 10px;
+  border-radius: 10px;
+  border: 2px solid var(--cadet);
+  color: var(--green);
+  padding: 7px;
+}
+
+.pop-btn:hover {
+  background-color: var(--green);
+  border: 1px solid var(--green);
+  color: var(--ghost-white);
 }
