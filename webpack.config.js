@@ -3,7 +3,8 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+// const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -50,10 +51,15 @@ module.exports = {
       },
     ],
   },
+  optimization: {
+    minimizer: [new CssMinimizerPlugin()],
+    minimize: true,
+  },
   plugins: [
     new MiniCssExtractPlugin({ filename: '[name].[chunkhash:8].css' }),
     new RemoveEmptyScriptsPlugin(),
-    new OptimizeCSSAssetsPlugin({}),
+    new MiniCssExtractPlugin(),
+    // new OptimizeCSSAssetsPlugin({}),
     new HtmlWebPackPlugin({
       template: './src/html/index.html',
       filename: './index.html',
