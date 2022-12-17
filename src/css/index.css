@@ -1,7 +1,7 @@
 /* Example of @import use
 This imports the `css` files */
-@import './reset.css';
-@import './main.css';
-@import './small_screen.css' screen and (min-width: 600px);
-@import './medium_screen.css' screen and (min-width: 768px);
-@import './large_screen.css' screen and (min-width: 992px);
+@import "./reset.css";
+@import "./main.css";
+@import "./small_screen.css" screen and (min-width: 600px);
+@import "./medium_screen.css" screen and (min-width: 768px);
+@import "./large_screen.css" screen and (min-width: 992px);
