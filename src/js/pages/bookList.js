@@ -25,6 +25,7 @@ class BookList {
       <th class="th-sm">Title</th>
       <th class="th-sm">Author</th>
       <th class="th-sm"></th>
+      <th class="th-sm"></th>
     `;
 
     // Adding some style to the table header cells

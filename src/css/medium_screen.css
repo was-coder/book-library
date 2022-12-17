@@ -41,7 +41,7 @@
 }
 
 .btn::after {
-  content: '\00bb';
+  content: "\00bb";
   position: absolute;
   opacity: 0;
   top: 4px;
@@ -69,8 +69,27 @@
   font-size: 2.5rem;
 }
 
-.remove-btn {
+.booklist-empty {
+  padding: 20px 0;
+  font-size: 3rem;
+}
+
+.remove-edit {
   font-size: 1.8rem;
+}
+
+.remove-edit:hover {
+  color: var(--ghost-white);
+}
+
+.remove-btn:hover {
+  background-color: var(--red);
+  border: 1px solid var(--red);
+}
+
+.edit-btn:hover {
+  background-color: var(--green);
+  border: 1px solid var(--green);
 }
 
 /* Add Book Styling */
@@ -112,4 +131,8 @@
   background-color: var(--green);
   border: 1px solid var(--green);
   color: var(--ghost-white);
+}
+
+.edit-input {
+  width: 100%;
 }

@@ -32,7 +32,7 @@ body {
   min-width: 100vw;
 }
 
-[type='text']::placeholder,
+[type="text"]::placeholder,
 .page,
 .remove-btn {
   font-weight: 600;

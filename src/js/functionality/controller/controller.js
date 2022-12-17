@@ -13,6 +13,7 @@ import addPopUp from '../popup/addPopUp';
 import NewBookAdded from '../newBookAdded';
 import removePopUp from '../popup/removePopUp';
 import clearFormValues from '../forms/clearFormValues';
+import editBookController from './editBookController';
 
 const controller = () => {
   let books = [];
@@ -31,6 +32,13 @@ const controller = () => {
       books = updatedBooks;
       deleteBook(id);
       setLocalStorage(books);
+    } else if (e.target.classList.contains('edit-btn')) {
+      const id = e.target.classList[1];
+      const updateBookInfo = (updatedArray) => {
+        books = updatedArray;
+        setLocalStorage(books);
+      };
+      editBookController(id, books, updateBookInfo);
     }
   };
 
