@@ -1,0 +1,65 @@
+/* Homepage Styling */
+.home {
+  padding-top: 15vh;
+  padding-bottom: 10vh;
+}
+
+/* Book List Styling */
+.booklist-empty {
+  font-size: 2rem;
+}
+
+/* Popup Styling */
+.success-background {
+  background-color: #f5f5f5;
+  min-height: 70%;
+  padding: 0 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.successful {
+  font-size: 1.7rem;
+  font-weight: 600;
+  padding: 20px 0;
+}
+
+.success-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pop-btn {
+  font-size: 1.5rem;
+}
+
+/* Edit Styling */
+.cancel-div {
+  display: flex;
+  align-self: flex-end;
+}
+
+.cancel-btn {
+  cursor: pointer;
+  border: none;
+}
+
+.form-edit {
+  padding: 10px 0;
+}
+
+.edit-input {
+  width: 100%;
+}
+
+.update-btn {
+  width: 100%;
+  background-color: var(--green);
+  border: 1px solid var(--green);
+  border-radius: 10px;
+  color: var(--ghost-white);
+}

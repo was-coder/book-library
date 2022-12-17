@@ -22,16 +22,16 @@ class Home {
       <p class="description">Books that will be featured are in the form of book's title and author's name. Samples are given below:</p>      
       <div class="book-list">
         <div class="book-item">
-          <h3>The Great Gatsby</h3>
-          <p>by F. Scott Fitzgerald</p>
+          <h3>Things Fall Apart</h3>
+          <p>by Chinua Achebe</p>
         </div>
         <div class="book-item">
-          <h3>The Catcher in the Rye</h3>
-          <p>by J.D. Salinger</p>
+          <h3>The Lion and the Jewel</h3>
+          <p>by Wole Soyinka</p>
         </div>
         <div class="book-item">
-          <h3>To Kill a Mockingbird</h3>
-          <p>by Harper Lee</p>
+          <h3>Shall I compare thee to a summer day</h3>
+          <p>by William Shakespare</p>
         </div>
       </div>
     `;

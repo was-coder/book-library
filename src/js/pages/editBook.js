@@ -1,9 +1,9 @@
 class EditBook {
   static getBook() {
     const editSection = document.createElement('div');
-    editSection.className = 'success-container';
+    editSection.className = 'popup-container';
     editSection.innerHTML = `
-        <div class='success-background'>
+        <div class='popup-background'>
         <div class="cancel-div">
             <button class="cancel-btn"><i class="fa-solid fa-2x fa-xmark"></i></button>
             </div>

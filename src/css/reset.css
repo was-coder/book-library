@@ -29,10 +29,10 @@ body {
 .header,
 .footer-div {
   position: fixed;
-  min-width: 100vw;
+  min-width: 100%;
 }
 
-[type="text"]::placeholder,
+[type='text']::placeholder,
 .page,
 .remove-btn {
   font-weight: 600;
@@ -60,7 +60,7 @@ body {
   cursor: pointer;
   background-color: var(--cadet);
   border-radius: 25px;
-  width: 25%;
+  width: 30%;
   display: block;
   transition: all 1s;
   font-size: 1.5rem;
@@ -83,7 +83,7 @@ body {
   outline: none;
 }
 
-.success-container {
+.popup-container {
   display: none;
   place-items: center;
   position: fixed;

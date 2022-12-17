@@ -60,7 +60,7 @@ const controller = () => {
   const switchedBookList = () => {
     const main = document.querySelector('#main');
     addPopUp(main, NewBookAdded.updateBookAdded, getBook);
-    const activePopUp = document.querySelector('.success-container');
+    const activePopUp = document.querySelector('.popup-container');
     const addNewBook = document.querySelector('.addNewBook-button');
     const returnBookList = document.querySelector('.list-button');
     returnBookList.addEventListener('click', switchData);

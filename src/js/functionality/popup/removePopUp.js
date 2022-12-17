@@ -1,6 +1,6 @@
 const removePopUp = () => {
   const main = document.querySelector('#main');
-  const activePopUp = document.querySelector('.success-container');
+  const activePopUp = document.querySelector('.popup-container');
   activePopUp.classList.remove('pop-active');
   main.removeChild(main.childNodes[1]);
 };

@@ -12,7 +12,7 @@
   position: absolute;
   border: none;
   top: 5px;
-  right: 5px;
+  right: 15px;
   color: var(--amber);
   font-size: 3rem;
 }
@@ -40,8 +40,8 @@
 /* Homepage Styling */
 .home {
   background: var(--ghost-white);
-  min-width: 100vw;
-  padding-top: 15vh;
+  min-width: 100%;
+  padding-top: 12vh;
   padding-bottom: 10vh;
   min-height: 100vh;
 }
@@ -106,8 +106,8 @@
   cursor: pointer;
 }
 
-th {
-  padding-left: 10px;
+td {
+  font-weight: 600;
 }
 
 .table-header {
@@ -122,11 +122,8 @@ th {
 }
 
 .remove-edit {
-  font-size: 1.5rem;
-  margin-bottom: 5px;
-  border: none;
+  font-size: 1.2rem;
   background: none;
-  font-weight: 600;
   padding: 5px 10px;
 }
 
@@ -143,7 +140,7 @@ th {
 .booklist-empty {
   padding: 20px 0;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: var(--red);
   width: 100%;
@@ -162,7 +159,7 @@ th {
   width: 80%;
 }
 
-input[type="text"] {
+input[type='text'] {
   padding: 10px;
   height: 4rem;
   font-size: 2rem;
@@ -213,7 +210,7 @@ input[type="text"] {
 }
 
 /* Popup Styling */
-.success-background {
+.popup-background {
   background-color: #f5f5f5;
   min-height: 70%;
   padding: 0 30px;
@@ -225,7 +222,7 @@ input[type="text"] {
   border-radius: 10px;
 }
 
-.successful {
+.success {
   font-size: 1.7rem;
   font-weight: 600;
   padding: 20px 0;
@@ -239,6 +236,7 @@ input[type="text"] {
 .pop-btn {
   margin: 0 10px;
   border-radius: 10px;
+  font-size: 1.2rem;
   border: 1px solid var(--cadet);
   color: var(--green);
   padding: 7px;
@@ -268,5 +266,15 @@ input[type="text"] {
   background-color: var(--green);
   border: 1px solid var(--green);
   border-radius: 10px;
+  color: var(--ghost-white);
+}
+
+.return-btn {
+  border: 1px solid var(--green);
+  color: var(--green);
+}
+
+.return-btn:hover {
+  background-color: var(--green);
   color: var(--ghost-white);
 }
