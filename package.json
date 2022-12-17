@@ -4,7 +4,8 @@
   "private": true,
   "dependencies": {
     "file-loader": "^6.2.0",
-    "jquery": "^3.6.1"
+    "jquery": "^3.6.1",
+    "optimize-css-assets-webpack-plugin": "^6.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
@@ -17,7 +18,7 @@
     "eslint": "^8.x",
     "eslint-config-airbnb-base": "^15.x",
     "eslint-plugin-import": "^2.x",
-    "hint": "^6.x",
+    "hint": "^2.0.0",
     "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.0",
