@@ -32,6 +32,13 @@ const controller = () => {
       books = updatedBooks;
       deleteBook(id);
       setLocalStorage(books);
+
+      if (updatedBooks.length === 0) {
+        const message = document.createElement('p');
+        message.className = 'booklist-empty';
+        message.innerText = 'Book List is empty... Please add a book';
+        document.querySelector('.content-div').appendChild(message);
+      }
     } else if (e.target.classList.contains('edit-btn')) {
       const id = e.target.classList[1];
       const updateBookInfo = (updatedArray) => {
