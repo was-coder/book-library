@@ -1,0 +1,15 @@
+/* Homepage Styling */
+.home {
+  padding-top: 15vh;
+  padding-bottom: 10vh;
+}
+
+/* Book List Styling */
+.booklist-empty {
+  font-size: 2rem;
+}
+
+/* Popup Styling */
+.pop-btn {
+  font-size: 1.5rem;
+}

@@ -2,26 +2,62 @@
   "name": "js-template",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "file-loader": "^6.2.0",
+    "jquery": "^3.6.1"
+  },
   "devDependencies": {
-    "eslint": "^8.10.0",
-    "eslint-config-airbnb-base": "^14.x",
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "auto-live-reload-webpack-plugin": "^1.0.4",
+    "babel-loader": "^8.2.4",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^10.2.4",
+    "css-loader": "^6.7.1",
+    "css-minimizer-webpack-plugin": "^4.2.2",
+    "eslint": "^8.x",
+    "eslint-config-airbnb-base": "^15.x",
     "eslint-plugin-import": "^2.x",
-    "prettier": "^1.19.1",
-    "stylelint": "^13.x",
-    "stylelint-config-recommended": "^3.x",
-    "stylelint-config-standard": "^20.x",
-    "stylelint-csstree-validator": "^1.x",
-    "stylelint-scss": "^3.x"
+    "hint": "^2.0.0",
+    "html-loader": "^3.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "prettier": "^2.x",
+    "stylelint": "^14.x",
+    "stylelint-config-recommended": "^7.x",
+    "stylelint-config-standard": "^25.x",
+    "stylelint-csstree-validator": "^2.x",
+    "stylelint-scss": "^4.x",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.8.1",
+    "webpack-fix-style-only-entries": "^0.6.1",
+    "webpack-remove-empty-scripts": "^0.8.0"
   },
   "scripts": {
-    "format": "npx prettier  --write '**/*.{html,js,json,md,json,yaml,yml,jsx}'",
-    "format:check": "npx prettier  --check '**/*.{html,js,json,md,json,yaml,yml}'",
-    "lint": "npx stylelint \"**/*.css\" --fix && npx eslint . --fix",
-    "lint:check": "npx stylelint \"**/*.css\" && npx eslint .",
-    "stylelint": "npx stylelint \"**/*.css\" --fix",
-    "stylelint:check": "npx stylelint \"**/*.css\"",
+    "format": "npx prettier  --write **/*.{html,js,json,md,json,yaml,yml,jsx}",
+    "format:check": "npx prettier  --check **/*.{html,js,json,md,json,yaml,yml}",
+    "lint": "npx stylelint **/*.css --fix && npx eslint . --fix",
+    "lint:check": "npx stylelint **/*.css && npx eslint .",
+    "stylelint": "npx stylelint **/*.css --fix",
+    "stylelint:check": "npx stylelint **/*.css",
     "eslint": "npx eslint . --fix",
-    "eslint:check": "npx eslint ."
-  }
+    "eslint:check": "npx eslint .",
+    "build": "npx webpack --mode production",
+    "build:watch": "npx webpack --watch",
+    "dev": "webpack serve"
+  },
+  "description": "> This is a Javascript Book Library Project.",
+  "main": ".prettierrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/was-coder/book-library.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/was-coder/book-library/issues"
+  },
+  "homepage": "https://github.com/was-coder/book-library#readme"
 }
