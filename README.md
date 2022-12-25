@@ -9,7 +9,7 @@
 - Html,
 - Css,
 - Javascript,
-- Hosted by Netlify
+- Hosted on Netlify
 
 ## Live Demo
 

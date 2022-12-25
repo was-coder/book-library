@@ -1,0 +1,21 @@
+.btn {
+  width: 15%;
+}
+
+.book-input {
+  width: 40%;
+}
+
+.btn::after {
+  right: -20px;
+}
+
+/* Popup Styling */
+.success-background {
+  width: 50%;
+}
+
+.update-btn,
+.edit-input {
+  width: 100%;
+}

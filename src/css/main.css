@@ -1,0 +1,273 @@
+/* Header styling */
+.header {
+  z-index: 1;
+  min-height: 5vh;
+}
+
+.navbar-brand {
+  font-size: 2.5rem;
+}
+
+.navbar-toggler {
+  position: absolute;
+  border: none;
+  top: 5px;
+  right: 15px;
+  color: var(--amber);
+  font-size: 3rem;
+}
+
+.navbar-collapse {
+  font-size: 18px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.nav-item {
+  list-style-type: none;
+  margin: 15px;
+}
+
+.nav-link {
+  transition: all 0.5s ease-in-out;
+  font-size: 2rem;
+}
+
+.nav-link:hover {
+  cursor: pointer;
+}
+
+/* Homepage Styling */
+.home {
+  background: var(--ghost-white);
+  min-width: 100%;
+  padding-top: 12vh;
+  padding-bottom: 10vh;
+  min-height: 100vh;
+}
+
+.banner-title {
+  font-size: 3rem;
+  color: var(--green);
+  text-align: center;
+  font-weight: 600;
+}
+
+.description {
+  padding: 20px 0;
+  font-size: 2rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.featured {
+  padding-top: 30px;
+  color: var(--green);
+  font-weight: 600;
+}
+
+.book-list {
+  flex-wrap: wrap;
+}
+
+.book-item {
+  width: 200px;
+  margin: 20px;
+  text-align: center;
+}
+
+.book-item h3 {
+  font-size: 1.7rem;
+  margin: 10px 0;
+  font-weight: 600;
+  color: var(--cadet);
+}
+
+.book-item p {
+  font-size: 1.7rem;
+}
+
+.btn-book {
+  font-size: 1.5rem;
+}
+
+/* Book List Styling */
+.table {
+  margin: 0 auto;
+  width: 80%;
+  font-size: 1.7rem;
+}
+
+td {
+  font-weight: 600;
+}
+
+.table-header {
+  color: var(--green);
+  font-size: 3rem;
+  padding: 10px 0;
+  font-weight: 600;
+}
+
+.table-cells {
+  padding: 12px 0;
+  font-size: 2rem;
+  padding-left: 5px;
+  background-color: var(--cadet);
+  color: var(--ghost-white);
+}
+
+.remove-edit {
+  font-size: 1.1rem;
+  background: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.remove-btn {
+  color: var(--red);
+  border: 1px solid var(--red);
+}
+
+.edit-btn {
+  color: var(--green);
+  border: 1px solid var(--green);
+}
+
+.booklist-empty {
+  padding: 20px 0;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--red);
+  width: 100%;
+}
+
+/* Add book styling */
+.add-header {
+  color: var(--green);
+  font-size: 3rem;
+  padding-bottom: 30px;
+  font-weight: 600;
+}
+
+.book-input {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.add-style {
+  padding: 10px;
+  height: 4rem;
+  font-size: 2rem;
+}
+
+/* Contact Styling */
+.time {
+  display: flex;
+  justify-content: flex-end;
+  color: var(--cadet);
+  font-weight: 600;
+}
+
+.contact-info {
+  color: var(--green);
+  font-weight: 600;
+}
+
+.contact-description {
+  padding: 20px 0;
+}
+
+.contact-ul-div {
+  text-align: start;
+}
+
+.contact-ul-div li {
+  padding: 5px 0;
+  font-size: 1.5rem;
+}
+
+.list-span {
+  color: var(--cadet);
+  font-weight: 600;
+  padding-left: 5px;
+}
+
+/* Footer Styling */
+.footer-div {
+  text-align: center;
+  bottom: 0;
+}
+
+.footer-div h5 {
+  font-size: 1.7rem;
+}
+
+/* Popup Styling */
+.popup-background {
+  background-color: #f5f5f5;
+  min-height: 70%;
+  padding: 0 30px;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.success {
+  font-size: 1.7rem;
+  font-weight: 600;
+  padding: 20px 0;
+}
+
+.success-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pop-btn {
+  margin: 0 10px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  border: 1px solid var(--cadet);
+  color: var(--green);
+  padding: 7px;
+}
+
+/* Edit Styling */
+.cancel-div {
+  display: flex;
+  align-self: flex-end;
+}
+
+.cancel-btn {
+  cursor: pointer;
+  border: none;
+}
+
+.form-edit {
+  padding: 10px 0;
+}
+
+.edit-input {
+  width: 100%;
+}
+
+.update-btn {
+  width: 100%;
+  background-color: var(--green);
+  border: 1px solid var(--green);
+  border-radius: 10px;
+  color: var(--ghost-white);
+}
+
+.return-btn {
+  border: 1px solid var(--green);
+  color: var(--green);
+}
+
+.return-btn:hover {
+  background-color: var(--green);
+  color: var(--ghost-white);
+}
