@@ -12,7 +12,7 @@ class AddBook {
             name="title"
             placeholder="Title"
             required
-            class="form-control book-input title"
+            class="form-control book-input title add-style"
           />
         </div>
 
@@ -23,7 +23,7 @@ class AddBook {
             name="author"
             placeholder="Author"
             required
-            class="form-control book-input author"
+            class="form-control book-input author add-style"
           />
         </div>
 

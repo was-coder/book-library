@@ -156,7 +156,7 @@ td {
   width: 80%;
 }
 
-input[type='text'] {
+.add-style {
   padding: 10px;
   height: 4rem;
   font-size: 2rem;
