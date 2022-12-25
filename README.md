@@ -2,7 +2,7 @@
 
 > This is a Javascript Book Library Project.
 
-![screenshot](./app_screenshot.png)
+![Book App Screenshot](/src/assets/app_screenshot.PNG)
 
 ## Built With
 
