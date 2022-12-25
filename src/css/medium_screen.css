@@ -41,7 +41,7 @@
 }
 
 .btn::after {
-  content: "\00bb";
+  content: '\00bb';
   position: absolute;
   opacity: 0;
   top: 4px;
@@ -65,8 +65,8 @@
   font-size: 3rem;
 }
 
-.th-sm {
-  font-size: 2.5rem;
+.table-cells {
+  font-size: 3rem;
 }
 
 .booklist-empty {

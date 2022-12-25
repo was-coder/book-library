@@ -20,23 +20,13 @@ class BookList {
 
     // Creating the table header row
     const tableHeaderRow = document.createElement('tr');
-    tableHeaderRow.className = 'table-header';
+    tableHeaderRow.className = 'table-cells';
     tableHeaderRow.innerHTML = `
-      <th class="th-sm">Title</th>
-      <th class="th-sm">Author</th>
-      <th class="th-sm"></th>
-      <th class="th-sm"></th>
+      <th>Title</th>
+      <th>Author</th>
+      <th></th>
+      <th></th>
     `;
-
-    // Adding some style to the table header cells
-    const tableHeaderCells = tableHeaderRow.querySelectorAll('th');
-    tableHeaderCells.forEach((cell) => {
-      cell.style.textAlign = 'left';
-      cell.style.paddingTop = '12px';
-      cell.style.paddingBottom = '12px';
-      cell.style.backgroundColor = '#1a183a';
-      cell.style.color = '#e8e8f0';
-    });
 
     // Creating the table body
     const tableBody = document.createElement('tbody');

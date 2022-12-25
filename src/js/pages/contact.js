@@ -15,7 +15,7 @@ class Contact {
     <ul>
     <li>Our E-mail: <span class="list-span">     adelakunwasiu1000@gmail.com</span></li>
     <li>Our Phone number: <span class="list-span">Let's keep it hidden</span></li>
-    <li>Our Address: <span class="list-span">Adekeye Street, Off Ojo Road, Lagos Nigeria</span></li>
+    <li>Our Address: <span class="list-span">Lagos, Nigeria</span></li>
     </ul>
     </div>
     </div>

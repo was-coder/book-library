@@ -1,5 +1,6 @@
 const addPopUp = (main, func, getBook) => {
-  main.appendChild(func(getBook));
+  const getFunc = func(getBook);
+  main.appendChild(getFunc);
   const activePopUp = document.querySelector('.popup-container');
   const stopPropagation = document.querySelector('.popup-background');
   activePopUp.classList.add('pop-active');
