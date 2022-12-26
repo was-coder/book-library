@@ -118,20 +118,18 @@ td {
 }
 
 .remove-edit {
-  font-size: 1.1rem;
-  background: none;
-  padding: 5px 10px;
+  font-size: 1.5rem;
   cursor: pointer;
+  border: none;
+  background: none;
 }
 
 .remove-btn {
   color: var(--red);
-  border: 1px solid var(--red);
 }
 
 .edit-btn {
   color: var(--green);
-  border: 1px solid var(--green);
 }
 
 .booklist-empty {
