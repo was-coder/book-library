@@ -120,7 +120,8 @@ td {
 .remove-edit {
   font-size: 1.5rem;
   cursor: pointer;
-  border: none;
+
+  /* border: none; */
   background: none;
 }
 
