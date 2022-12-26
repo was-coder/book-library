@@ -78,20 +78,6 @@
   font-size: 1.8rem;
 }
 
-.remove-edit:hover {
-  color: var(--ghost-white);
-}
-
-.remove-btn:hover {
-  background-color: var(--red);
-  border: 1px solid var(--red);
-}
-
-.edit-btn:hover {
-  background-color: var(--green);
-  border: 1px solid var(--green);
-}
-
 /* Add Book Styling */
 .add-header {
   font-size: 4rem;
