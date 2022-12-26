@@ -20,8 +20,10 @@ const updateNewBook = (updateBook) => {
     removeBtn.id = id;
     titleColumn.innerText = title;
     authorColumn.innerText = author;
-    removeBtn.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
-    editBtn.innerHTML = '<i class="fa-solid fa-pen-to-square"></i>';
+    // removeBtn.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+    // editBtn.innerHTML = '<i class="fa-solid fa-pen-to-square"></i>';
+    removeBtn.innerText = 'Remove';
+    editBtn.innerText = 'Edit';
     removeBtn.className = 'remove-btn remove-edit';
     editBtn.className = `edit-btn ${id} remove-edit`;
     removeColumn.append(removeBtn);
