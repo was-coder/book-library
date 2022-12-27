@@ -100,6 +100,7 @@
 
 td {
   font-weight: 600;
+  font-size: 1.5rem;
 }
 
 .table-header {
@@ -118,19 +119,21 @@ td {
 }
 
 .remove-edit {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   cursor: pointer;
-
-  /* border: none; */
+  display: block;
+  border: none;
   background: none;
 }
 
 .remove-btn {
   color: var(--red);
+  border: 1px solid var(--red);
 }
 
 .edit-btn {
   color: var(--green);
+  border: 1px solid var(--green);
 }
 
 .booklist-empty {

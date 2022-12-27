@@ -9,7 +9,7 @@ class Home {
 
       <div class="description">
         <p>
-          At the Book Library, we are passionate about books and dedicated to helping you find the perfect one for your needs. Whether you are looking for a thrilling novel, a thought-provoking non-fiction book, or a classic work of literature, you will find it here.
+          At the Book Library, we are passionate about books and dedicated to helping you organize your books and find books easily. Whether you are looking for a thrilling novel you have read, a thought-provoking non-fiction book, or a classic work of literature, you will find it in your book library.
         </p>
       </div>
 
