@@ -96,11 +96,13 @@
   margin: 0 auto;
   width: 80%;
   font-size: 1.7rem;
+  table-layout: fixed;
 }
 
 td {
   font-weight: 600;
   font-size: 1.5rem;
+  word-break: break-all;
 }
 
 .table-header {
@@ -138,11 +140,9 @@ td {
 
 .booklist-empty {
   padding: 20px 0;
-  text-align: center;
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--red);
-  width: 100%;
 }
 
 /* Add book styling */
@@ -221,6 +221,7 @@ td {
   font-size: 1.7rem;
   font-weight: 600;
   padding: 20px 0;
+  word-break: break-all;
 }
 
 .success-btn {
@@ -267,6 +268,7 @@ td {
 .return-btn {
   border: 1px solid var(--green);
   color: var(--green);
+  padding: 10px;
 }
 
 .return-btn:hover {
