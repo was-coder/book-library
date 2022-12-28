@@ -2,7 +2,7 @@ const updateNewBook = (updateBook) => {
   if (updateBook.length === 0) {
     const message = document.createElement('p');
     message.className = 'booklist-empty';
-    message.innerText = 'Book List is empty... Please add a book';
+    message.innerText = 'Book List is empty';
     document.querySelector('.content-div').appendChild(message);
   }
 
